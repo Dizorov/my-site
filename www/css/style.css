@@ -1,0 +1,122 @@
+@media (max-width: 600px) {
+	aside.nav {}
+	section.content {}
+}
+
+/*CSS here...*/
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #9BF;
+	font-family: 'Kurale', serif;
+	box-sizing: border-box;
+	color: #000;
+	/*text-shadow: 1px 1px #000;*/
+}
+
+div.wrapper {
+	margin: 16px;
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	grid-template-areas: 
+		"header header"
+		"nav cont"
+		"footer footer";
+		grid-gap: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+}
+
+header.header {
+	color: white;
+	grid-area: header;
+	background-color: #43004DFF;
+	height: 85px;
+	padding: 0;
+	width: auto;
+}
+
+header > h1 {
+	font-size: 56px;
+	padding: 0;
+	margin: 0;
+}
+
+h2 {
+	margin: 0;
+	font-size: 48px;
+}
+
+h3 {
+	margin: 0;
+	font-size: 36px;
+}
+
+nav.nav {
+	grid-area: nav;
+	background-color: #2999D5FF;
+	padding: 0;
+	height: 311px;
+}
+
+nav > ul {
+	margin: auto 0;
+	padding-left: 0;
+}
+
+nav.nav > ul > li:first-child {
+	border-top: 1px solid rgba(100, 100, 100, 0.5);
+}
+
+nav.nav > ul > li:last-child {
+	border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+}
+
+nav.nav > ul > li {
+	text-align: center;
+	color: white;
+	border-top: 1px solid rgba(100, 100, 100, 0.5);
+	list-style-type: none;
+	padding: 18px 0;
+	font-weight: 400;
+}
+
+nav.nav > ul > li:hover {
+	cursor: pointer;
+	background-color: #1A6388FF;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+section.content {
+	grid-area: cont;
+	background-color: #8BC;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	overflow: auto;
+	height: auto;
+}
+
+section.content > p {
+	font-size: 22px;
+	margin: 0px 15px;
+	padding: 5px;
+	/*line-height: 1.2em;*/
+}
+
+footer.footer {
+	grid-area: footer;
+	background-color: #B10379FF;
+	height: 80px;
+	color: white;
+	text-shadow: 1px 1px #000;
+}
+
+.hidden {
+	display: none;
+}
